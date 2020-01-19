@@ -15,16 +15,20 @@ def used_glosses(morpheme, data):
     return(used_gloss)
 
 with open('excerpt-pangloss.json', 'r') as json_file:
-    jsondata = json.load(json_file)[0]
+    jsondata = json.load(json_file)
 
 data = pd.DataFrame(jsondata)
 
 nb_phrases= data.shape[0]
+print("nb_phrases =", nb_phrases)
 df_general = data.count()
+print("df_general = ", df_general)
 
 #nb lang
 nb_lang = data["lang"].nunique()
+print("nb_lang = ", nb_lang)
 list_name_lang = data["lang"].unique()
+print("list_name_lang = ", list_name_lang)
 
 used_gloss_morphem= used_glosses("glose_morphem", data)
 used_gloss_word= used_glosses("glose_word", data)
