@@ -80,7 +80,7 @@ used_gloss_word= used_glosses("glose_word", data)
 pickle.dump((used_gloss_word, used_gloss_morphem), open("gloss.pkl", "wb"))
 ```
 ## <a name="gloss"></a>Glosses descriptive analysis
-Once I had the new file, created a new function that would convert my .pkl to a list of all the present gloses in the dataset and BLAHBLAH
+Once I had the new file, created a new function that would convert my .pkl to a sorted list of all the pairs (*glose-number of times it appears*) present in the dataset.
 ```python
 def from_data_to_list(pickledata, num):
     data = pickledata[num]
@@ -132,6 +132,7 @@ I ran this function for *the gloses for words* and *the gloses for morphems* in 
 #make_graphs(pickledata,1,"morphemes")
 ```
 This gave me the following graphics:
+
 ![First 10 gloses](https://github.com/lnarbona/Pangloss/tree/master/Graphs/first_10_morphemes.png "First 10 morphem gloses")
 
 ![Middle 10 gloses](https://github.com/lnarbona/Pangloss/tree/master/Graphs/middle_10_morphemes.png "Middle 10 morphem gloses")
