@@ -99,6 +99,9 @@ To have an overall look of the data in glosses we had and their distribution, I 
 * The first 100 gloses
 * The middle 100 gloses
 * The last 100 gloses
+
+(I added ```FontProperties``` because some of the data were in Chinese (and matplotlib wouldn't show them)
+
 ```python
 import pickle
 import numpy as np
@@ -173,7 +176,7 @@ def make_graphs(pickledata, num,type):
     plt.xticks(xs, labels, rotation=90, FontProperties=ChineseFont) #Replace default x-ticks with xs, then replace xs with labels
     plt.savefig('last_100_{}.png'.format(type))
 ```
-In order to run this function, I wrote the following code:
+I ran this function for the gloses for words and for the gloses for morphems in all my dataset:
 ```python
 #Graph for words:
 #make_graphs(pickledata,0,"words")
@@ -181,6 +184,8 @@ In order to run this function, I wrote the following code:
 #Graph for morphemes:
 #make_graphs(pickledata,1,"morphemes")
 ```
+This gave me the following graphics:
+
 
 Finally, I decided also to look 
 
