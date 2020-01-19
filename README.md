@@ -103,16 +103,14 @@ To have an overall look of the data in glosses we had and their distribution, I 
 An example of the code for one of the created graphics is the following (I added ```FontProperties``` because some of the data were in Chinese and matplotlib wouldn't show them):
 
 ```python
-import pickle
-import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.font_manager import FontProperties
-from operator import itemgetter
-from collections import defaultdict
+import seaborn as sns
 
 def make_graphs(pickledata, num,type):
     sorted_biglist = from_data_to_list(pickledata,num)
-
+    sns.set()
+    
     #Middle 10
     num = int(len(sorted_biglist)/2)
     middle10 = sorted_biglist[num-5:num+5]
@@ -122,6 +120,7 @@ def make_graphs(pickledata, num,type):
     width = 1
     plt.bar(xs, ys, width, align='center')
     plt.xticks(xs, labels, rotation=90, FontProperties=ChineseFont)
+    plt.suptitle('First 10 {}'.format(type))
     plt.savefig('middle_10_{}.png'.format(type))
 ```
 I ran this function for *the gloses for words* and *the gloses for morphems* in all my dataset:
