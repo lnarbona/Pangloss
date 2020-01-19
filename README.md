@@ -220,13 +220,19 @@ def languages_in_gloses(data):
 ```
 The results I got from applying the precedent codes are the following ones:
 ```python
-def languages_in_gloses(data):
-    languages = []
-    for key, value in data.items():
-        for i in value:
-            if i not in languages:
-                languages.append(i)
-    return(languages)
+>>> #Gloss data for words
+>>> multiple_lang_gloss_words,length_words = multiple_language_gloss(pickledata,0)
+>>> print(length_words)
+
+>>> languages = languages_in_gloses(multiple_lang_gloss_words)
+>>> print(languages)
+
+#Gloss data for 
+>>> multiple_lang_gloss_morph,length_morph = multiple_language_gloss(pickledata,1)
+>>> print(length_moprh)
+
+>>> languages = languages_in_gloses(multiple_lang_gloss_morph)
+>>> print(languages)
 ```
 
 ## <a name="gloss"></a>Executing the code
