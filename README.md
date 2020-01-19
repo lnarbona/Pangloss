@@ -236,5 +236,5 @@ The results I got from applying the precedent codes are the following ones:
 ```
 
 ## <a name="gloss"></a>Executing the code
-When executing the code, you can doing it separatly now because both *pangloss.json* and *gloss.pkl* are in the GitHub. Anyways, if you were to do it as if *gloss.pkl* wasn't already created, you should execute ```fist_data.py``` first and ```descriptive_data.py``` secondly.
+When executing the code, you can doing it separatly now because both ```pangloss.json``` and ```gloss.pkl``` are in the GitHub. Anyways, if you were to do it as if ```gloss.pkl``` wasn't already created, you should execute ```fist_data.py``` first and ```descriptive_data.py``` secondly.
 
