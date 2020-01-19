@@ -133,7 +133,7 @@ I ran this function for *the gloses for words* and *the gloses for morphems* in 
 ```
 This gave me the following graphics:
 
-![alt text](https://github.com/lnarbona/Pangloss/tree/master/Graphs/first_10_morphemes.png "First 10 morphem gloses")
+![alt text](/Graphs/first_10_morphemes.png "First 10 morphem gloses")
 
 ![Middle 10 gloses](https://github.com/lnarbona/Pangloss/tree/master/Graphs/middle_10_morphemes.png "Middle 10 morphem gloses")
 
