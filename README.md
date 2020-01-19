@@ -2,7 +2,7 @@
 
 The aim of this project was to do a descriptive analysis of the linguistic data acquired in the [Pangloss Collection](https://pangloss.cnrs.fr/index_en.htm "PANGLOSS website"), to be able to create a tool that would group all glosses by type.
 
-The Pangloss Collection is a database of media in under-documented languages. One type of data Pangloss has are transcripted texts, with their gloses (per word, per morphem, or both) and with a translation in another language (English, French...). The "problem" with this kind of data, though, is that because different researches do the work, it is difficult to have unified gloses and translation. The ultimate goal of the project I have been working on, it to create a tool that would permit unify all those gloses in order for linguists to compare different languages. This bunch of code is the beginning of this project: descriptive analysis of the dataset to see how does it look like, before gettnig into the creation of the tool itself.
+The Pangloss Collection is a database of media in under-documented languages. One type of data Pangloss has are transcripted texts, with their gloses (per word, per morphem, or both) and with a translation in another language (English, French...). The "problem" with this kind of data, though, is that because different researches do the work, it is difficult to have unified gloses and translation. The ultimate goal of this project is to create a tool that would allow to unify all those gloses in order for linguists to compare different languages. This bunch of code is the beginning of this project: descriptive analysis of the dataset to see how it looks like, before getting to the creation of the tool itself.
 
 /!\ The file always names as ```pangloss.json``` is, in this code, ```excerpt-pangloss.json```, given that the first one was really heavy to be posted in this repository.
 
@@ -41,7 +41,7 @@ data = pd.DataFrame(jsondata)
 ```
 
 ## <a name="parse"></a>First Parsing
-For the first steps of the parsing, I wanted to have a general view of the DataFrame, know how many phrases we had in total, and finally which languages and how many were we dealing with. To do so, I used the following code (and got the following output):
+For the first steps of the parsing, I wanted to have a general view of the DataFrame, know how many phrases we had in total, and finally which languages and how many we were dealing with. To do so, I used the following code (and got the following output):
 ```python
 >>> # general view of the DataFrame
 >>> df_general = data.count()
@@ -159,7 +159,7 @@ def make_graphs(pickledata, num,type):
     plt.suptitle('First 10 {}'.format(type))
     plt.savefig('middle_10_{}.png'.format(type))
 ```
-I ran this function for *the gloses for words* and *the gloses for morphems* in all my dataset:
+I ran this function for all *the gloses for words* and *the gloses for morphems* in my dataset:
 ```python
 pickledata = pickle.load(open('gloss.pkl', 'rb'))
 
@@ -246,7 +246,7 @@ The results I got from applying the precedent codes are the following ones:
 When executing the code, you can do it separatly now because both ```pangloss.json``` and ```gloss.pkl``` are in the GitHub. Anyways, if you were to do it as if ```gloss.pkl``` wasn't already created, you should execute ```fist_data.py``` first and then ```descriptive_data.py```.
 
 ## <a name="conclusion"></a>Conclusion
-This is the beggining of a biggere project, where I just got to know the database. Further steps I should take to finish the project would be:
+This is the beggining of a bigger project, where I just got to know the database. Further steps I should take to finish the project would be:
 * Separate Chinese and non-Chinese gloses (to create first a code with latin alphabet).
 * See the distance of edition (Levenshtein distance) of the different strings (gloses).
 * Group gloses by minimal edition distance to see if they are the same but ordered/written differently.
