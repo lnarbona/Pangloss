@@ -250,7 +250,7 @@ This is the beggining of a bigger project, where I just got to know the database
 * Separate Chinese and non-Chinese gloses (to create first a code with latin alphabet).
 * See the distance of edition (Levenshtein distance) of the different strings (gloses).
 * Group gloses by minimal edition distance to see if they are the same but ordered/written differently.
-* I should also take into account that the glosses (even if all of them are written in the latin alphabet after the filter), are still written in different languages (mostly English and French). So, for example, 1SG-work and travailler-1SG can have the same meaning, but a mere LD will not show that --> think on implementing some kind of translation.
+* I should also take into account that the glosses (even if all of them are written in the latin alphabet after the filter), are still written in different languages (mostly English and French). So, for example, *1SG-work* and *travailler-1SG* can have the same meaning, but a mere LD will not show that --> think on implementing some kind of translation.
 
 ## <a name="learned"></a>What I learned in this course
 I've already coded before, as one of the courses in my Bachelor I had informatics and then in biology projects (basic data-treating). In this project I'd been able to get to know a new dataset using descriptive analysis and I learned how to use panda (to see which part of the data I'd to parse, to llok directly at the data before coding) and how tocreate this kind of histograms. 
