@@ -4,6 +4,8 @@ The aim of this project was to do a descriptive analysis of the linguistic data 
 
 The Pangloss Collection is a database of media in under-documented languages. One type of data Pangloss has are transcripted texts, with their gloses (per word, per morphem, or both) and with a translation in another language (English, French...). The "problem" with this kind of data, though, is that because different researches do the work, it is difficult to have unified gloses and translation. The ultimate goal of the project I have been working on, it to create a tool that would permit unify all those gloses in order for linguists to compare different languages. This bunch of code is the beginning of this project: descriptive analysis of the dataset to see how does it look like, before gettnig into the creation of the tool itself.
 
+/!\ The file always names as ```pangloss.json``` is, in this code, ```excerpt-pangloss.json```, given that the first one was really heavy to be posted in this repository.
+
 #### Table of Contents
 
 * [Grabbing the Data](#data)
