@@ -132,12 +132,19 @@ I ran this function for *the gloses for words* and *the gloses for morphems* in 
 #make_graphs(pickledata,1,"morphemes")
 ```
 This gave me the following graphics:
-![First 10 gloses](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-![Middle 10 gloses](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-![Last 10 gloses](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-![First 100 gloses](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-![Middle 100 gloses](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-![Last 100 gloses](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![First 10 gloses](https://github.com/lnarbona/Pangloss/tree/master/Graphs/first_10_morphemes.png "First 10 morphem gloses")
+![Middle 10 gloses](https://github.com/lnarbona/Pangloss/tree/master/Graphs/middle_10_morphemes.png "Middle 10 morphem gloses")
+![Last 10 gloses](https://github.com/lnarbona/Pangloss/tree/master/Graphs/last_10_morphemes.png "Last 10 morphem gloses")
+![First 100 gloses](https://github.com/lnarbona/Pangloss/tree/master/Graphs/first_100_morphemes.png "First 100 morphem gloses")
+![Middle 100 gloses](https://github.com/lnarbona/Pangloss/tree/master/Graphs/middle_100_morphemes.png "Middle 100 morphem gloses")
+![Last 100 gloses](https://github.com/lnarbona/Pangloss/tree/master/Graphs/last_100_morphemes.png "Last 100 morphem gloses")
+
+![First 10 gloses](https://github.com/lnarbona/Pangloss/tree/master/Graphs/first_10_words.png "First 10 word gloses")
+![Middle 10 gloses](https://github.com/lnarbona/Pangloss/tree/master/Graphs/middle_10_words.png "Middle 10 word gloses")
+![Last 10 gloses](https://github.com/lnarbona/Pangloss/tree/master/Graphs/last_10_words.png "Last 10 word gloses")
+![First 100 gloses](https://github.com/lnarbona/Pangloss/tree/master/Graphs/first_100_words.png "First 100 word gloses")
+![Middle 100 gloses](https://github.com/lnarbona/Pangloss/tree/master/Graphs/middle_100_words.png "Middle 100 word gloses")
+![Last 100 gloses](https://github.com/lnarbona/Pangloss/tree/master/Graphs/last_100_words.png "Last 100 word gloses")
 
 Finally, I decided also to look 
 
