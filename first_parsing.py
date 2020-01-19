@@ -1,4 +1,3 @@
-#pangloss
 import json
 import pandas as pd
 import numpy as np
@@ -15,7 +14,7 @@ def used_glosses(morpheme, data):
                 used_gloss[glose_list].append(row["lang"])
     return(used_gloss)
 
-with open('pangloss.json', 'r') as json_file:
+with open('excerpt-pangloss.json', 'r') as json_file:
     jsondata = json.load(json_file)[0]
 
 data = pd.DataFrame(jsondata)
