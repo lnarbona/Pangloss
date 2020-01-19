@@ -40,17 +40,49 @@ data = pd.DataFrame(jsondata)
 ## <a name="parse"></a>First Parsing
 For the first steps of the parsing, I wanted to have a general view of the DataFrame, know how many phrases we had in total, and finally which languages and how many were we dealing with. To do so, I used the following code (and got the following output):
 ```python
-# general view of the DataFrame
-df_general = data.count()
+>>> # general view of the DataFrame
+>>> df_general = data.count()
+bi                          305
+che                           8
+cmn                        1290
+cn                          522
+de                         2927
+ell                         736
+en                        31606
+eng                        1650
+fr                        36662
+glose_morphem             27567
+glose_word                20129
+it                         2110
+lang                     120328
+ne                         1003
+nep                        1261
+src                      109780
+tokenized_src_morphem     29342
+tokenized_src_word        35562
+vie                         519
+vn                           42
+zh                        33886
+dtype: int64
 
-# nb of phrases in total
-nb_phrases= data.shape[0]
+>>> # nb of phrases in total
+>>> nb_phrases= data.shape[0]
+120328
 
-# nb lang
-nb_lang = data["lang"].nunique()
+>>> # nb lang
+>>> nb_lang = data["lang"].nunique()
+88
 
-# list of languages
-list_name_lang = data["lang"].unique() 
+>>> # list of languages
+>>> list_name_lang = data["lang"].unique() 
+['tvk' 'nep' 'nge' 'lhu' 'aji' 'taj' 'ayn' 'way' 'dhv' 'lzz' 'tur' 'swb'
+ 'zdj' 'bfq' 'nem' 'iai' 'uve' 'rmn' 'mkd' 'bul' 'ixc' 'nee' 'nua' 'udl'
+ 'lag' 'ycn' 'ady' 'kkt' 'tdh' 'klr' 'ckb' 'pmi' 'che' 'svm' 'hrv' 'hsb'
+ 'ers' 'cmn' 'sxg' 'twh' 'tpo' 'akr' 'mlv' 'msn' 'lkn' 'wwo' 'mrm' 'olr'
+ 'krf' 'tgs' 'mtt' 'hiw' 'lht' 'tkw' 'lrz' 'tql' 'urr' 'vra' 'tkp' 'tnx'
+ 'vnk' 'jya' 'nbc' 'vay' 'lif' 'bhj' 'lus' 'njo' 'new' 'uby' 'nru' 'nxq'
+ 'vie' 'tyj' 'ane' 'axx' 'wls' 'fud' 'cir' 'kdk' 'bwa' 'cam' 'pri' 'piz'
+ 'kke' 'pbn' 'kdx']
 ```
 Then, I proceeded to look more into the gloses themselves, grabbing the following informations for each language:
 * Its gloses-per-word
