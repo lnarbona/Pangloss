@@ -16,7 +16,7 @@ The Pangloss Collection is a database of media in under-documented languages. On
 * [What I learned from this course](#learned)
 
 ## <a name="data"></a>Grabbing the data
-The data of The Pangloss Collection has been extracted from diverse XML files and recorded in a JSON (*pangloss.json*) in the form of a list of dictionnaries as the following:
+The data of The Pangloss Collection has been extracted from diverse XML files and recorded in a JSON (```pangloss.json```) in the form of a list of dictionnaries as the following:
 ```python
 {"lang": "tvk", "src": "Napol goni transleta tei .", "en": "I work as a translator", "bi": "mi wok olsem wan translator", "tokenized_src_morphem": ["na", "pol", "goni", "transleta", "tei"], "glose_morphem": ["1s.nfut", "work", "3s.be_like.ind", "translator", "one"]}
 ```
@@ -106,7 +106,7 @@ def used_glosses(gloses, data):
                 used_gloss[glose_list].append(row["lang"])
     return(used_gloss)
 ```
-Then, I applied this function to **"glose_word"** and to **"glose_morphem"** and saved the data in another file (*gloss.pkl*), so it would be easier to treat afterwards:
+Then, I applied this function to **"glose_word"** and to **"glose_morphem"** and saved the data in another file (```gloss.pkl```), so it would be easier to treat afterwards:
 ```python
 import pickle
 
@@ -115,7 +115,7 @@ used_gloss_word= used_glosses("glose_word", data)
 pickle.dump((used_gloss_word, used_gloss_morphem), open("gloss.pkl", "wb"))
 ```
 ## <a name="gloss"></a>Glosses descriptive analysis
-Once I had the new file, created a new function that would convert my .pkl to a sorted list of all the pairs (*glose-number of times it appears*) present in the dataset.
+Once I had the new file, created a new function that would convert my ```.pkl``` to a sorted list of all the pairs (*glose-number of times it appears*) present in the dataset.
 ```python
 def from_data_to_list(pickledata, num):
     data = pickledata[num]
@@ -135,7 +135,7 @@ To have an overall look of the data in glosses we had and their distribution, I 
 * The middle 100 gloses
 * The last 100 gloses
 
-An example of the code for one of the created graphics is the following (I added ```FontProperties``` because some of the data were in Chinese and matplotlib wouldn't show them):
+An example of the code for one of the created graphics is the following (I added ```FontProperties``` because some of the data were in Chinese and ```matplotlib``` wouldn't show them):
 
 ```python
 import matplotlib.pyplot as plt
@@ -169,7 +169,7 @@ make_graphs(pickledata,0,"words")
 #Graph for morphemes:
 make_graphs(pickledata,1,"morphemes")
 ```
-This gave me the following graphs:
+This gave me the following graphs (You can see them directly in GitHub, I have problems displaying them in GitHub Pages):
 
 ![First 10 gloses](https://github.com/lnarbona/Pangloss/blob/master/Graphs/first_10_morphemes.png "First 10 morphem gloses")
 
@@ -197,7 +197,7 @@ This gave me the following graphs:
 
 We can see that the graphs follow a Zipf law distribution, as we could have expected.
 
-Finally, I decided also to look at which glosses appeared in more than one language (the ones that should be interesting for us in this project) 
+Finally, I decided also to look at which glosses appeared in more than one language (the ones that should be interesting for us in this project)
 ```python
 def multiple_language_gloss(pickledata, num):
     data=pickledata[num]
