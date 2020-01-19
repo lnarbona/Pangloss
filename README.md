@@ -193,6 +193,8 @@ This gave me the following graphics:
 
 ![Last 100 gloses](https://github.com/lnarbona/Pangloss/blob/master/Graphs/last_100_words.png "Last 100 word gloses")
 
+We can see that the graphs follow a Zipf law distribution, as we could have expected.
+
 Finally, I decided also to look at which glosses appeared in more than one language (the ones that should be interesting for us in this project) 
 ```python
 def multiple_language_gloss(pickledata, num):
