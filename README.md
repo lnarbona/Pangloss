@@ -85,12 +85,12 @@ Once I had the new file, created a new function that would convert my .pkl to a 
 def from_data_to_list(pickledata, num):
     data = pickledata[num]
     del(data[None])
-    biglist = []
+    whole_list = []
     for key in data:
         list=[key, len(data[key])]
-        biglist.append(list)
-    sorted_biglist = sorted(biglist, key=itemgetter(1), reverse = True)
-    return(sorted_biglist)
+        whole_list.append(list)
+    sorted_whole_list = sorted(whole_list, key=itemgetter(1), reverse = True)
+    return(sorted_whole_list)
 ```
 To have an overall look of the data in glosses we had and their distribution, I created a function to make and save graphs of:
 * The first 10 gloses
@@ -108,12 +108,13 @@ from matplotlib.font_manager import FontProperties
 import seaborn as sns
 
 def make_graphs(pickledata, num,type):
-    sorted_biglist = from_data_to_list(pickledata,num)
+    sorted_whole_list = from_data_to_list(pickledata,num)
+    ChineseFont = FontProperties("Microsoft YaHei")
     sns.set()
     
     #Middle 10
-    num = int(len(sorted_biglist)/2)
-    middle10 = sorted_biglist[num-5:num+5]
+    num = int(len(sorted_whole_list)/2)
+    middle10 = sorted_whole_list[num-5:num+5]
     labels, ys = zip(*middle10)
     plt.figure(figsize=(20, 15))
     xs = np.arange(len(labels))
@@ -125,6 +126,8 @@ def make_graphs(pickledata, num,type):
 ```
 I ran this function for *the gloses for words* and *the gloses for morphems* in all my dataset:
 ```python
+pickledata = pickle.load(open('gloss.pkl', 'rb'))
+
 #Graph for words:
 make_graphs(pickledata,0,"words")
 
@@ -157,12 +160,43 @@ This gave me the following graphics:
 
 ![Last 100 gloses](https://github.com/lnarbona/Pangloss/blob/master/Graphs/last_100_words.png "Last 100 word gloses")
 
-Finally, I decided also to look 
+Finally, I decided also to look at which glosses appeared in more than one language (the ones that should be interesting for us in this project) 
+```python
+def multiple_language_gloss(pickledata, num):
+    data=pickledata[num]
+    del(data[None])
+    multiple_lang_gloss = defaultdict(list)
+    for key, value in data.items():
+        list_lang = []
+        for lang in value:
+            if lang not in list_lang:
+                list_lang.append(lang)
+        if len(list_lang) > 1:
+            multiple_lang_gloss[key] = list_lang
+    return(multiple_lang_gloss, len(multiple_lang_gloss))
+```
+and also which languages are shared by the gloses in the data: 
 
 ```python
-#Graph for words:
-#make_graphs(pickledata,0,"words")
-
-#Graph for morphemes:
-#make_graphs(pickledata,1,"morphemes")
+def languages_in_gloses(data):
+    languages = []
+    for key, value in data.items():
+        for i in value:
+            if i not in languages:
+                languages.append(i)
+    return(languages)
 ```
+The results I got from applying the precedent codes are the following ones:
+```python
+def languages_in_gloses(data):
+    languages = []
+    for key, value in data.items():
+        for i in value:
+            if i not in languages:
+                languages.append(i)
+    return(languages)
+```
+
+## <a name="gloss"></a>Executing the code
+When executing the code, you can doing it separatly now because both *pangloss.json* and *gloss.pkl* are in the GitHub. Anyways, if you were to do it as if *gloss.pkl* wasn't already created, you should execute ```fist_data.py``` first and ```descriptive_data.py``` secondly.
+
