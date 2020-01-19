@@ -34,8 +34,8 @@ This file has been the one used for the ensuing analysis, importing it with the 
 import json
 import pandas as pd
 
-with open('pangloss.json', 'r') as json_file:
-    jsondata = json.load(json_file)[0]
+with open('excerpt-pangloss.json', 'r') as json_file:
+    jsondata = json.load(json_file)
 
 data = pd.DataFrame(jsondata)
 ```
@@ -231,7 +231,9 @@ The results I got from applying the precedent codes are the following ones:
 2351
 >>> languages = languages_in_gloses(multiple_lang_gloss_words)
 >>> print(languages)
-['tvk', 'lhu', 'nbc', 'iai', 'uve', 'kdk', 'ane', 'nxq', 'aji', 'nem', 'swb', 'jya', 'cam', 'kkt', 'nru', 'axx', 'bwa', 'twh', 'tyj', 'ycn', 'dhv', 'piz', 'pri', 'che', 'uby', 'ady', 'mkd', 'hrv', 'bul', 'svm', 'hsb', 'ers', 'cmn', 'sxg', 'pmi', 'tpo']
+['tvk', 'lhu', 'nbc', 'iai', 'uve', 'kdk', 'ane', 'nxq', 'aji', 'nem', 'swb', 'jya', 
+'cam', 'kkt', 'nru', 'axx', 'bwa', 'twh', 'tyj', 'ycn', 'dhv', 'piz', 'pri', 'che', 
+ 'uby', 'ady', 'mkd', 'hrv', 'bul', 'svm', 'hsb', 'ers', 'cmn', 'sxg', 'pmi', 'tpo']
 
 #Gloss data for morphems
 >>> multiple_lang_gloss_morph,length_morph = multiple_language_gloss(pickledata,1)
@@ -239,7 +241,10 @@ The results I got from applying the precedent codes are the following ones:
 3004
 >>> languages = languages_in_gloses(multiple_lang_gloss_morph)
 >>> print(languages)
-['tvk', 'rmn', 'mkd', 'ixc', 'kkt', 'tdh', 'klr', 'ckb', 'svm', 'hrv', 'lif', 'bhj', 'kke', 'lhu', 'pmi', 'hsb', 'akr', 'vay', 'lus', 'njo', 'uby', 'nge', 'bul', 'swb', 'lag', 'kdx', 'udl', 'bfq', 'way', 'nxq', 'nee', 'dhv', 'taj', 'lzz', 'ayn', 'nru', 'ers', 'cmn', 'sxg']
+['tvk', 'rmn', 'mkd', 'ixc', 'kkt', 'tdh', 'klr', 'ckb', 'svm', 'hrv', 'lif', 'bhj', 
+'kke', 'lhu', 'pmi', 'hsb', 'akr', 'vay', 'lus', 'njo', 'uby', 'nge', 'bul', 'swb', 
+'lag', 'kdx', 'udl', 'bfq', 'way', 'nxq', 'nee', 'dhv', 'taj', 'lzz', 'ayn', 'nru', 
+'ers', 'cmn', 'sxg']
 ```
 
 ## <a name="code"></a>Executing the code
