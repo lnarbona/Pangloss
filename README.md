@@ -100,7 +100,7 @@ To have an overall look of the data in glosses we had and their distribution, I 
 * The middle 100 gloses
 * The last 100 gloses
 
-(I added ```FontProperties``` because some of the data were in Chinese (and matplotlib wouldn't show them)
+An example of the code for one of the created graphics is the following (I added ```FontProperties``` because some of the data were in Chinese and matplotlib wouldn't show them):
 
 ```python
 import pickle
@@ -113,70 +113,18 @@ from collections import defaultdict
 def make_graphs(pickledata, num,type):
     sorted_biglist = from_data_to_list(pickledata,num)
 
-    #First 10
-    first10 = sorted_biglist[:10]
-    labels, ys = zip(*first10)
-    plt.figure(figsize=(20, 15))  # width:10, height:8
-    xs = np.arange(len(labels))
-    width = 1
-    plt.bar(xs, ys, width, align='center')
-    plt.xticks(xs, labels, rotation=90, FontProperties=ChineseFont) #Replace default x-ticks with xs, then replace xs with labels
-    plt.savefig('first_10_{}.png'.format(type))
-
     #Middle 10
     num = int(len(sorted_biglist)/2)
     middle10 = sorted_biglist[num-5:num+5]
     labels, ys = zip(*middle10)
-    plt.figure(figsize=(20, 15))  # width:10, height:8
+    plt.figure(figsize=(20, 15))
     xs = np.arange(len(labels))
     width = 1
     plt.bar(xs, ys, width, align='center')
-    plt.xticks(xs, labels, rotation=90, FontProperties=ChineseFont) #Replace default x-ticks with xs, then replace xs with labels
+    plt.xticks(xs, labels, rotation=90, FontProperties=ChineseFont)
     plt.savefig('middle_10_{}.png'.format(type))
-
-    #Last 10
-    last10 = sorted_biglist[-10:]
-    labels, ys = zip(*last10)
-    plt.figure(figsize=(20, 15))  # width:10, height:8
-    xs = np.arange(len(labels))
-    width = 1
-    plt.bar(xs, ys, width, align='center')
-    plt.xticks(xs, labels, rotation=90, FontProperties=ChineseFont) #Replace default x-ticks with xs, then replace xs with labels
-    plt.savefig('last_10_{}.png'.format(type))
-
-    #First 100
-    first100 = sorted_biglist[:100]
-    labels, ys = zip(*first100)
-    plt.figure(figsize=(20, 15))  # width:10, height:8
-    xs = np.arange(len(labels))
-    width = 1
-    plt.bar(xs, ys, width, align='center')
-    plt.xticks(xs, labels, rotation=90, FontProperties=ChineseFont) #Replace default x-ticks with xs, then replace xs with labels
-    plt.savefig('first_100_{}.png'.format(type))
-
-    #Middle 100
-    num = int(len(sorted_biglist)/2)
-    middle100 = sorted_biglist[num-50:num+50]
-    labels, ys = zip(*middle100)
-    plt.figure(figsize=(20, 15))  # width:10, height:8
-    xs = np.arange(len(labels))
-    width = 1
-    plt.bar(xs, ys, width, align='center')
-    plt.xticks(xs, labels, rotation=90, FontProperties=ChineseFont) #Replace default x-ticks with xs, then replace xs with labels
-    plt.savefig('middle_100_{}.png'.format(type))
-
-    #Last 100
-    last10 = sorted_biglist[-100:]
-    labels, ys = zip(*last10)
-    plt.figure(figsize=(20, 15))  # width:10, height:8
-    xs = np.arange(len(labels))
-    width = 1
-    rwidth = 0.5
-    plt.bar(xs, ys, width, align='center')
-    plt.xticks(xs, labels, rotation=90, FontProperties=ChineseFont) #Replace default x-ticks with xs, then replace xs with labels
-    plt.savefig('last_100_{}.png'.format(type))
 ```
-I ran this function for the gloses for words and for the gloses for morphems in all my dataset:
+I ran this function for *the gloses for words* and *the gloses for morphems* in all my dataset:
 ```python
 #Graph for words:
 #make_graphs(pickledata,0,"words")
@@ -185,7 +133,12 @@ I ran this function for the gloses for words and for the gloses for morphems in 
 #make_graphs(pickledata,1,"morphemes")
 ```
 This gave me the following graphics:
-
+![First 10 gloses](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![Middle 10 gloses](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![Last 10 gloses](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![First 100 gloses](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![Middle 100 gloses](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![Last 100 gloses](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
 Finally, I decided also to look 
 
