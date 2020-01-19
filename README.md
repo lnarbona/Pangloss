@@ -169,7 +169,7 @@ make_graphs(pickledata,0,"words")
 #Graph for morphemes:
 make_graphs(pickledata,1,"morphemes")
 ```
-This gave me the following graphics:
+This gave me the following graphs:
 
 ![First 10 gloses](https://github.com/lnarbona/Pangloss/blob/master/Graphs/first_10_morphemes.png "First 10 morphem gloses")
 
