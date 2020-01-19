@@ -223,16 +223,18 @@ The results I got from applying the precedent codes are the following ones:
 >>> #Gloss data for words
 >>> multiple_lang_gloss_words,length_words = multiple_language_gloss(pickledata,0)
 >>> print(length_words)
-
+2351
 >>> languages = languages_in_gloses(multiple_lang_gloss_words)
 >>> print(languages)
+['tvk', 'lhu', 'nbc', 'iai', 'uve', 'kdk', 'ane', 'nxq', 'aji', 'nem', 'swb', 'jya', 'cam', 'kkt', 'nru', 'axx', 'bwa', 'twh', 'tyj', 'ycn', 'dhv', 'piz', 'pri', 'che', 'uby', 'ady', 'mkd', 'hrv', 'bul', 'svm', 'hsb', 'ers', 'cmn', 'sxg', 'pmi', 'tpo']
 
 #Gloss data for 
 >>> multiple_lang_gloss_morph,length_morph = multiple_language_gloss(pickledata,1)
 >>> print(length_moprh)
-
+3004
 >>> languages = languages_in_gloses(multiple_lang_gloss_morph)
 >>> print(languages)
+['tvk', 'rmn', 'mkd', 'ixc', 'kkt', 'tdh', 'klr', 'ckb', 'svm', 'hrv', 'lif', 'bhj', 'kke', 'lhu', 'pmi', 'hsb', 'akr', 'vay', 'lus', 'njo', 'uby', 'nge', 'bul', 'swb', 'lag', 'kdx', 'udl', 'bfq', 'way', 'nxq', 'nee', 'dhv', 'taj', 'lzz', 'ayn', 'nru', 'ers', 'cmn', 'sxg']
 ```
 
 ## <a name="gloss"></a>Executing the code
