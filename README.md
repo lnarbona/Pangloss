@@ -9,7 +9,8 @@ The Pangloss Collection is a database of media in under-documented languages. On
 * [Grabbing the Data](#data)
 * [First Parsing](#parse)
 * [Glosses descriptive analysis](#gloss)
-* [Bibliography](#bibliography)
+* [Executing the code](#code)
+* [Conclusion](#conclusion)
 * [What I learned from this course](#learned)
 
 ## <a name="data"></a>Grabbing the data
@@ -228,7 +229,7 @@ The results I got from applying the precedent codes are the following ones:
 >>> print(languages)
 ['tvk', 'lhu', 'nbc', 'iai', 'uve', 'kdk', 'ane', 'nxq', 'aji', 'nem', 'swb', 'jya', 'cam', 'kkt', 'nru', 'axx', 'bwa', 'twh', 'tyj', 'ycn', 'dhv', 'piz', 'pri', 'che', 'uby', 'ady', 'mkd', 'hrv', 'bul', 'svm', 'hsb', 'ers', 'cmn', 'sxg', 'pmi', 'tpo']
 
-#Gloss data for 
+#Gloss data for morphems
 >>> multiple_lang_gloss_morph,length_morph = multiple_language_gloss(pickledata,1)
 >>> print(length_moprh)
 3004
@@ -237,6 +238,16 @@ The results I got from applying the precedent codes are the following ones:
 ['tvk', 'rmn', 'mkd', 'ixc', 'kkt', 'tdh', 'klr', 'ckb', 'svm', 'hrv', 'lif', 'bhj', 'kke', 'lhu', 'pmi', 'hsb', 'akr', 'vay', 'lus', 'njo', 'uby', 'nge', 'bul', 'swb', 'lag', 'kdx', 'udl', 'bfq', 'way', 'nxq', 'nee', 'dhv', 'taj', 'lzz', 'ayn', 'nru', 'ers', 'cmn', 'sxg']
 ```
 
-## <a name="gloss"></a>Executing the code
-When executing the code, you can doing it separatly now because both ```pangloss.json``` and ```gloss.pkl``` are in the GitHub. Anyways, if you were to do it as if ```gloss.pkl``` wasn't already created, you should execute ```fist_data.py``` first and ```descriptive_data.py``` secondly.
+## <a name="code"></a>Executing the code
+When executing the code, you can do it separatly now because both ```pangloss.json``` and ```gloss.pkl``` are in the GitHub. Anyways, if you were to do it as if ```gloss.pkl``` wasn't already created, you should execute ```fist_data.py``` first and then ```descriptive_data.py```.
 
+## <a name="conclusion"></a>Conclusion
+This is the beggining of a biggere project, where I just got to know the database. Further steps I should take to finish the project would be:
+* Separate Chinese and non-Chinese gloses (to create first a code with latin alphabet).
+* See the distance of edition (Levenshtein distance) of the different strings (gloses).
+* Group gloses by minimal edition distance to see if they are the same but ordered/written differently.
+* I should also take into account that the glosses (even if all of them are written in the latin alphabet after the filter), are still written in different languages (mostly English and French). So, for example, 1SG-work and travailler-1SG can have the same meaning, but a mere LD will not show that --> think on implementing some kind of translation.
+
+## <a name="learned"></a>What I learned in this course
+I've already coded before, as one of the courses in my Bachelor I had informatics and then in biology projects (basic data-treating). In this project I'd been able to get to know a new dataset using descriptive analysis and I learned how to use panda (to see which part of the data I'd to parse, to llok directly at the data before coding) and how tocreate this kind of histograms. 
+I think that the articulations between this course and the DataCamp one were not clear enough for us. I don't know what was expected from me in this course and I think in some ways both courses overlapped.
